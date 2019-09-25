@@ -19,11 +19,23 @@ namespace SaveFormData_toDatabasewithjQueryAJAXinASPNet.Controller
         }
         [WebMethod]
         [ScriptMethod]
+       
+        [System.ComponentModel.ToolboxItem(false)]
+      
         public static void Saveemp(Models.empolyee emp)
+
+
         {
+            string vere = emp.Email;
+
+
             string connString = Models.dbconnection.ConnectionString1;
         }
-
+        public class User
+        {
+            public string Email { get; set; }
+            public string Password { get; set; }
+        }
 
         public class controllerclasss : Models.dbconnection
         {
