@@ -15,17 +15,17 @@
                 <tr>
                     <td style="width: 50%">
                         <label for="First_Name"><b>First name *</b></label><br />
-                        <input name="First_Namae" type="text" id="txtUsername" maxlength="50" style="width: 260px" />
+                        <input name="First_Namae" type="text" id="txtfname" maxlength="50" style="width: 260px" />
                     </td>
                     <td style="width: 50%">
                         <label for="Last_Name"><b>Last name *</b></label><br />
-                        <input name="Last_Name" type="text" maxlength="50" style="width: 260px" />
+                        <input name="Last_Name" type="text" id="txtlname"  maxlength="50" style="width: 260px" />
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <label for="Email_Address"><b>Email *</b></label><br />
-                        <input name="Email_Address" type="text" maxlength="100" style="width: 535px" />
+                        <input name="Email_Address" type="text" id="txtemail" maxlength="100" style="width: 535px" />
                     </td>
                 </tr>
                 <tr>
@@ -98,8 +98,8 @@
         $(function () {
             $("[id*=btnSave]").bind("click", function () {
                 var emp = {};
-                emp.Email = $("[id*=txtUsername]").val();
-                emp.Password = $("[id*=txtPassword]").val();
+                emp.First_Namae = $("[id*=txtfname]").val();
+                emp.Last_Name = $("[id*=txtlname]").val();
                 $.ajax({
                     type: "POST",
                     url: "http://localhost:53642/Controller/WebForm1.aspx/Saveemp",
